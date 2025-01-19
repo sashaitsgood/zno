@@ -30,7 +30,6 @@ html, body {
   font-size: 36px;
   font-weight: 400;
   color: var(--color-black);
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -597,7 +596,6 @@ html, body {
 /* Показ кнопки после прокрутки страницы */
 .scroll-to-top-btn.visible {
   opacity: 1;
-  visibility: visible;
 }
 
 @media (max-width: 1230px) {
