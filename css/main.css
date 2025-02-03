@@ -1,0 +1,1283 @@
+@charset "UTF-8";
+/* Fonts */
+@font-face {
+  font-family: "BetterTogether-Caps";
+  src: url("../fonts/BetterTogether-Caps.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gooseberry";
+  src: url("../fonts/gooseberry.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --color-white: #fff;
+  --color-black: #2F2F2F;
+  --color-brown: #725543;
+  --color-orange: #EF6E1C;
+  --color-svg-orange: #f5a907;
+  --color-light-orange: #FAE9C8;
+  --color-dark-brown: #725543;
+  --color-sand: #FFF8EA;
+}
+
+html, body {
+  font-family: "Gooseberry", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--color-black, #2F2F2F);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+
+.orange {
+  color: var(--color-orange, #EF6E1C);
+}
+
+.size {
+  font-size: 96px;
+}
+
+.font-family {
+  font-family: "BetterTogether-Caps", sans-serif;
+  font-size: 64px;
+}
+
+.number {
+  margin-right: 20px;
+}
+
+.main-background {
+  background: url("../img/background.webp") no-repeat center center/cover;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+.social svg:hover path {
+  fill: var(--color-svg-orange, #f5a907);
+}
+
+.header {
+  padding: 46px 0 87px 0;
+  align-items: center;
+  justify-content: center;
+}
+.header .nav {
+  padding: 20px;
+}
+.header .nav .flex {
+  gap: 30px;
+  align-items: center;
+}
+.header .nav ul {
+  margin-left: 37px;
+}
+.header .nav li {
+  position: relative;
+}
+.header .nav li:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 5px dashed #000;
+  bottom: -5px;
+}
+.header .social {
+  align-items: center;
+  justify-content: center;
+  margin-left: 349px;
+}
+
+.main-page {
+  position: relative;
+}
+.main-page .main-info {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "title img" "btn img";
+}
+.main-page .item1 {
+  grid-area: title;
+}
+.main-page .item2 {
+  grid-area: btn;
+  width: fit-content;
+  align-self: start;
+  position: relative;
+  top: -70px;
+}
+.main-page .item3 {
+  grid-area: img;
+}
+.main-page .main-title {
+  margin: 153px 96px 77px 0;
+  width: 500px;
+  height: 269px;
+  position: relative;
+  top: -70px;
+}
+.main-page .btn {
+  padding: 10px 50px;
+  position: relative;
+  left: 15px;
+  border-radius: 10px;
+  background-color: var(--color-orange, #EF6E1C);
+  color: var(--color-white, #fff);
+  font-size: 46px;
+}
+.main-page .btn:hover {
+  background-color: var(--color-brown, #725543);
+}
+.main-page .main-branch {
+  position: absolute;
+  right: 27%;
+  top: 15%;
+}
+
+.about-curses {
+  position: relative;
+  background-color: var(--color-sand, #FFF8EA);
+  padding-bottom: 120px;
+}
+.about-curses .container {
+  position: relative;
+}
+.about-curses .paper {
+  position: absolute;
+  right: -20%;
+  top: -50%;
+}
+.about-curses .sheet {
+  width: 27%;
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+.about-curses .title-about-curses {
+  position: absolute;
+  top: -80px;
+  z-index: 10;
+}
+.about-curses .img-title {
+  padding: 70px 220px;
+  background: url("../img/bg-title1.png") no-repeat center center/cover;
+}
+.about-curses .title {
+  white-space: nowrap;
+}
+.about-curses p {
+  width: 790px;
+  margin: 0;
+}
+.about-curses .small {
+  width: 690px;
+}
+.about-curses .text-wrapper {
+  padding: 200px 0 90px 0;
+}
+.about-curses .items {
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  width: 1200px;
+}
+.about-curses .items .item {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-curses .items .item1 {
+  width: 366px;
+  height: 121px;
+  background: url("../img/item1.png") no-repeat left center/cover;
+}
+.about-curses .items .item2 {
+  width: 375px;
+  height: 118px;
+  background: url("../img/item2.png") no-repeat right center/cover;
+}
+.about-curses .items .item3 {
+  width: 384px;
+  height: 113px;
+  background: url("../img/item3.png") no-repeat left center/cover;
+}
+.about-curses .items .item4 {
+  width: 375px;
+  height: 204px;
+  background: url("../img/item4.png") no-repeat left center/cover;
+}
+.about-curses .items .item5 {
+  width: 375px;
+  height: 140px;
+  background: url("../img/item5.png") no-repeat left center/cover;
+}
+.about-curses .items .item6 {
+  width: 376px;
+  height: 117px;
+  background: url("../img/item6.png") no-repeat left center/cover;
+}
+
+.benefits-courses {
+  position: relative;
+  background: url("../img/background.webp") no-repeat center center/cover;
+}
+.benefits-courses .title-benefits {
+  position: absolute;
+  top: -7%;
+  left: 35%;
+  z-index: 10;
+}
+.benefits-courses .img-title {
+  padding: 70px 220px;
+  background: url("../img/bg-title2.png") no-repeat left center/cover;
+}
+.benefits-courses .title {
+  white-space: nowrap;
+  text-align: center;
+}
+.benefits-courses .flower {
+  position: absolute;
+  right: 8%;
+  top: 80%;
+}
+.benefits-courses .sheet {
+  position: absolute;
+  right: -10%;
+  top: 34%;
+}
+.benefits-courses .items {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: justify;
+  flex-wrap: wrap;
+  padding: 250px 0 120px 0;
+}
+.benefits-courses .item {
+  position: relative;
+  width: 560px;
+}
+.benefits-courses .order-1 {
+  order: 1;
+}
+.benefits-courses .order-2 {
+  order: 3;
+}
+.benefits-courses .order-3 {
+  order: 5;
+}
+.benefits-courses .order-4 {
+  order: 2;
+}
+.benefits-courses .order-5 {
+  order: 4;
+}
+.benefits-courses .order-6 {
+  order: 6;
+}
+.benefits-courses p {
+  margin-bottom: 37px;
+  margin-right: 51px;
+}
+.benefits-courses .item3 {
+  position: relative;
+}
+.benefits-courses .dandelion {
+  position: absolute;
+  left: -75%;
+  top: 300%;
+}
+.benefits-courses .item6 {
+  position: relative;
+  margin-top: -35px;
+}
+
+.reviews {
+  height: 3000px;
+  background-color: var(--color-sand, #FFF8EA);
+}
+.reviews .container {
+  position: relative;
+}
+.reviews .paper {
+  position: absolute;
+  right: -10%;
+  top: -5%;
+}
+.reviews .title-reviews {
+  position: relative;
+  margin: -80px 0 0 80px;
+  z-index: 10;
+  max-width: 600px;
+}
+.reviews .img-title {
+  padding: 60px;
+  background: url("../img/bg-title1.png") no-repeat center center/cover;
+}
+.reviews .title {
+  text-align: center;
+}
+.reviews .items {
+  position: relative;
+  padding-top: 200px;
+}
+.reviews .items .item {
+  width: 700px;
+  text-align: justify;
+}
+.reviews .items .item1 {
+  padding: 30px 60px 90px 0;
+  background: url("../img/reviews1.png") no-repeat center center/cover;
+}
+.reviews .items .item1 .text {
+  padding: 70px 0 0 60px;
+  width: 550px;
+  margin: 0 auto;
+}
+.reviews .items .image1 .branch {
+  position: absolute;
+  left: -20%;
+  top: 9%;
+}
+.reviews .items .item2 {
+  padding: 20px;
+  width: 723px;
+  height: 456px;
+  position: absolute;
+  left: 49%;
+  top: 57%;
+  background: url("../img/reviews2.png") no-repeat center center/cover;
+}
+.reviews .items .item2 .text {
+  padding: 10px 0 5px 20px;
+  width: 550px;
+  margin: 0 auto;
+}
+.reviews .items .image2 .branch-small {
+  position: absolute;
+  top: 45%;
+  right: 1%;
+}
+.reviews .items .image2 .flower {
+  position: absolute;
+  top: 60%;
+  right: -5%;
+}
+.reviews .items .item3 {
+  margin-top: 50px;
+  padding: 20px;
+  width: 509px;
+  height: 521px;
+  position: absolute;
+  background: url("../img/reviews3.png") no-repeat center center/cover;
+}
+.reviews .items .item3 .text {
+  padding: 100px 0 0 50px;
+  width: 440px;
+  margin: 0 auto;
+}
+.reviews .items .image3 .dandelion {
+  position: absolute;
+  bottom: -15%;
+  left: 60%;
+}
+.reviews .items .item4 {
+  padding: 20px 0 60px 0;
+  position: absolute;
+  left: 42%;
+  top: 130%;
+  background: url("../img/reviews1.png") no-repeat center center/cover;
+}
+.reviews .items .item4 .text {
+  padding: 75px 0 5px 40px;
+  width: 500px;
+  margin: 0 auto;
+}
+.reviews .items .image4 .flower {
+  position: absolute;
+  top: 84%;
+  right: 15%;
+}
+.reviews .items .image4 .sheet {
+  position: absolute;
+  top: 72%;
+  right: -7%;
+}
+.reviews .items .item5 {
+  position: absolute;
+  bottom: -170%;
+  left: -2%;
+  padding: 100px 0 40px 0;
+  background: url("../img/reviews5.png") no-repeat center center/cover;
+}
+.reviews .items .item5 .text {
+  padding-bottom: 60px;
+  width: 550px;
+  margin: 0 auto;
+}
+.reviews .items .image5 .sheet-small {
+  position: absolute;
+  left: 80%;
+  top: 75%;
+}
+
+.burger-btn {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+
+.burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background-color: var(--color-black, #2F2F2F);
+  right: 5px;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+  -webkit-transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+  -ms-transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+  border-radius: 15px;
+}
+
+.burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+}
+
+.burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 580px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: left;
+  background-color: var(--color-sand, #FFF8EA);
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 30;
+}
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 36, 9, 0.5);
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal__content {
+  padding: 40px;
+}
+.modal .title {
+  margin-bottom: 30px;
+}
+
+.form-input {
+  width: 100%;
+  color: var(--color-orange, #EF6E1C);
+  padding: 15px;
+  margin-bottom: 24px;
+  background-color: var(--color-light-orange, #FAE9C8);
+  border-radius: 10px;
+}
+
+.btn-modal {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2%;
+  border-radius: 10px;
+  color: var(--color-white, #fff);
+  background-color: var(--color-orange, #EF6E1C);
+  font-size: 48px;
+}
+
+.btn-modal:hover {
+  background-color: var(--color-brown, #725543);
+}
+
+.modal.active,
+.modal__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about {
+  display: none;
+}
+
+.footer {
+  padding: 10px;
+  background-color: var(--color-dark-brown, #725543);
+  color: var(--color-white, #fff);
+  z-index: 5;
+}
+.footer nav.flex {
+  justify-content: center;
+  align-items: center;
+}
+.footer ul.flex {
+  align-items: center;
+  gap: 30px;
+}
+.footer .footer-top.flex {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer .footer-down {
+  text-align: center;
+}
+.footer li {
+  position: relative;
+}
+.footer li:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 5px dashed #fff;
+  bottom: -5px;
+}
+
+.footer-top.flex {
+  flex-direction: column;
+}
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  -ms-transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Показ кнопки после прокрутки страницы */
+.scroll-to-top-btn.visible {
+  opacity: 1;
+}
+
+@media (max-width: 1230px) {
+  .header .logo {
+    position: absolute;
+    left: 5%;
+  }
+  .main-info {
+    width: 100%;
+  }
+  .main-page .main-info {
+    display: grid;
+    display: -ms-grid;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "title" "img" "btn";
+  }
+  .main-page .main-info .main-title {
+    width: 80%;
+    padding-top: 20%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+  .main-page .main-info .btn-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px 150px 20px;
+  }
+  .main-page .main-info .btn {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 15%;
+  }
+  .main-page .main-info .main-branch {
+    width: 50%;
+    top: 36%;
+    left: -25%;
+  }
+  .main-page .main-info img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about-curses .title-about-curses {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-curses .img-title {
+    padding: 100px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-curses .text-wrapper {
+    padding-top: 0;
+  }
+  .about-curses .paper {
+    top: -30%;
+    right: -20%;
+  }
+  .about-curses .small {
+    max-width: 300px;
+  }
+  .about-curses .small + p {
+    max-width: 550px;
+  }
+  .about-curses .sheet {
+    width: 40%;
+    top: 5%;
+    right: 1%;
+  }
+  .about-curses .items {
+    width: 1100px;
+  }
+  .about-curses .item {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+  }
+  .benefits-courses .title-benefits {
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .benefits-courses .img-title {
+    position: relative;
+  }
+  .benefits-courses .title {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefits-courses p {
+    width: 100%;
+    margin-right: 0;
+  }
+  .benefits-courses .items {
+    width: 80%;
+    flex-direction: column;
+  }
+  .benefits-courses .item {
+    order: initial;
+    width: 90%;
+  }
+  .benefits-courses .item6 {
+    margin-top: 0;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -15%;
+    top: 565%;
+  }
+  .reviews .items .item {
+    position: static;
+    margin: 0 auto;
+  }
+  .reviews {
+    text-align: left;
+  }
+  .reviews .title-reviews {
+    position: relative;
+    top: -80px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .reviews .img-title {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviews .paper {
+    position: absolute;
+    right: -25%;
+    top: -8%;
+    z-index: 5;
+  }
+  .reviews .items .item {
+    text-align: left;
+  }
+  .reviews .items {
+    z-index: 6;
+    padding-top: 50px;
+  }
+  .reviews .items .item1 {
+    margin-bottom: 30px;
+  }
+  .reviews .items .image1 .branch {
+    width: 250px;
+    position: absolute;
+    top: 16%;
+    left: 55%;
+    transform: rotate(-28deg);
+    -webkit-transform: rotate(-28deg);
+    -ms-transform: rotate(-28deg);
+    z-index: -1;
+  }
+  .reviews .items .image2 .branch-small {
+    top: 1%;
+    right: 30%;
+  }
+  .reviews .items .image2 .flower {
+    opacity: 0.2;
+    top: 5%;
+    right: 21%;
+  }
+  .reviews .items .image3 .dandelion {
+    position: absolute;
+    top: 40%;
+    left: 17%;
+  }
+  .reviews .items .image4 .flower {
+    width: 60px;
+    position: absolute;
+    top: 62%;
+    right: 25%;
+  }
+  .reviews .items .image4 .sheet {
+    width: 100px;
+    position: absolute;
+    top: 62%;
+    right: 12%;
+  }
+  .reviews .items .image5 .sheet-small {
+    position: absolute;
+    top: 96%;
+    right: 20%;
+  }
+  .footer .footer-top .flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .burger-btn {
+    position: absolute;
+    right: 5%;
+    display: block;
+    z-index: 5;
+  }
+  .burger-menu {
+    position: absolute;
+    right: -250px;
+    top: 0;
+    width: 250px;
+    background-color: var(--color-sand, #FFF8EA);
+    padding: 90px 90px 550px 0;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    z-index: 2;
+  }
+  .burger-menu ul {
+    display: block;
+  }
+  .burger-menu a {
+    display: block;
+    color: var(--color-black, #2F2F2F);
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .header.open .burger-menu {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+  }
+  .burger-menu div.social {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    margin: 0;
+  }
+  .li-way {
+    white-space: nowrap;
+  }
+  li {
+    display: inline-block;
+  }
+}
+@media (max-width: 990px) {
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -15%;
+    top: 605%;
+  }
+  .about-curses .items {
+    display: block;
+    width: 100%;
+  }
+  .about-curses .item {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 841px) {
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -15%;
+    top: 665%;
+  }
+  .reviews .item3 .image3 .dandelion {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+}
+@media (max-width: 764px) {
+  .about-curses .img-title {
+    padding: 50px;
+  }
+}
+@media (max-width: 730px) {
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -15%;
+    top: 695%;
+  }
+  .reviews .paper {
+    right: -35%;
+    top: -5%;
+  }
+}
+@media (max-width: 663px) {
+  .img-title .title {
+    font-size: 46px;
+  }
+  .main-page .main-info .main-title {
+    font-size: 40px;
+    margin-bottom: -5%;
+    margin-top: 10%;
+  }
+  .main-page .main-info .main-branch {
+    width: 55%;
+    top: 31%;
+    left: -25%;
+  }
+  .main-page .main-info .btn {
+    margin-top: 30%;
+  }
+  .about-curses .text-wrapper {
+    padding-top: 20px;
+  }
+  .about-curses .small {
+    max-width: 370px;
+    margin-bottom: 20px;
+  }
+  .about-curses .paper {
+    top: -21%;
+    right: -42%;
+  }
+  .about-curses .sheet {
+    top: 5%;
+    right: -5%;
+  }
+  .benefits-courses .flower {
+    right: 15%;
+    top: 78%;
+  }
+  .benefits-courses .sheet {
+    width: 120px;
+    right: -7%;
+    top: 36%;
+  }
+  .benefits-courses .items {
+    padding-top: 150px;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -17%;
+    top: 800%;
+  }
+  .reviews {
+    height: 3300px;
+  }
+  .reviews .items .item1 .text {
+    padding: 70px 10px 0 0;
+    width: 450px;
+  }
+  .reviews .items .item2 {
+    width: 710px;
+    height: auto;
+  }
+  .reviews .items .item2 .text p {
+    width: 450px;
+  }
+  .reviews .items .image2 .branch-small {
+    top: 1%;
+    right: 17%;
+  }
+  .reviews .items .image2 .flower {
+    right: 6%;
+  }
+  .reviews .items .image3 .dandelion {
+    top: 40%;
+    left: -3%;
+  }
+  .reviews .items .item4 .text {
+    padding: 75px 10px 5px 0;
+    width: 420px;
+  }
+  .reviews .items .image4 .flower {
+    top: 60%;
+    right: 15%;
+  }
+  .reviews .items .image4 .sheet {
+    top: 59%;
+    right: -2%;
+  }
+  .reviews .items .item5 .text {
+    padding: 0 60px 60px 0;
+    width: 500px;
+  }
+}
+@media (max-width: 565px) {
+  .main .main-info .main-title {
+    width: 490px;
+  }
+  .main .main-info .main-branch {
+    top: 32%;
+    left: -35%;
+  }
+  .about-curses .small {
+    max-width: 370px;
+  }
+  .about-curses .small + p {
+    max-width: 460px;
+  }
+  .about-curses .paper {
+    top: -18%;
+    right: -45%;
+  }
+  .about-curses .sheet {
+    top: 5%;
+    right: -3%;
+  }
+  .benefits-courses .flower {
+    right: 10%;
+    top: 76%;
+  }
+  .benefits-courses .sheet {
+    width: 120px;
+    right: -10%;
+    top: 47%;
+  }
+  .benefits-courses .dandelion {
+    width: 150px;
+    position: absolute;
+    left: -17%;
+    top: 900%;
+  }
+  .reviews .items .text p {
+    font-size: 30px;
+  }
+  .reviews .items .item1 .text p {
+    width: 350px;
+  }
+  .reviews .items .item2 .text p {
+    width: 390px;
+  }
+  .reviews .items .item3 {
+    width: 460px;
+  }
+  .reviews .items .item3 .image3 .dandelion {
+    width: 35%;
+    top: 40%;
+    left: -10%;
+  }
+  .reviews .items .item4 {
+    position: relative;
+    left: -180px;
+    width: 700px;
+  }
+  .reviews .items .item4 .text {
+    padding-left: 120px;
+    width: 520px;
+  }
+  .reviews .items .image4 .flower {
+    top: 20%;
+    right: 20%;
+  }
+  .reviews .items .image4 .sheet {
+    top: 15%;
+    right: 5%;
+  }
+  .reviews .items .item5 {
+    width: 500px;
+  }
+  .reviews .items .item5 .text {
+    width: 490px;
+    padding-left: 60px;
+  }
+}
+@media (max-width: 514px) {
+  .main-page {
+    height: 900px;
+  }
+  .main-page .main-info .main-title {
+    margin-top: 8%;
+    margin-bottom: 5%;
+    width: 300px;
+    font-size: 24px;
+  }
+  .main-page .main-info img {
+    position: relative;
+    top: -150px;
+    width: 350px;
+  }
+  .main-page .main-info .btn {
+    top: -200px;
+    font-size: 24px;
+    width: 390px;
+  }
+  .main-page .main-info .main-branch {
+    position: absolute;
+    width: 250px;
+    right: 10%;
+    top: 25%;
+  }
+  p {
+    font-size: 26px;
+  }
+  .about-curses .small {
+    max-width: 280px;
+  }
+  .about-curses .small + p {
+    max-width: 410px;
+  }
+  .about-curses .paper {
+    top: -22%;
+    right: -36%;
+  }
+  .about-curses .img-title {
+    padding: 50px 120px;
+  }
+  .about-curses .sheet {
+    top: 4%;
+    right: -3%;
+  }
+  .benefits-courses .img-title {
+    padding: 60px 90px;
+  }
+  .benefits-courses .sheet {
+    width: 120px;
+    right: -13%;
+    top: 43%;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -17%;
+    top: 700%;
+  }
+}
+@media (max-width: 491px) {
+  .img-title .title {
+    font-size: 30px;
+  }
+  .main-page .main-info .main-title {
+    margin-top: 15%;
+  }
+  .main-page .main-info .btn-wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .main-page .main-info .btn {
+    width: 100%;
+    margin-top: 45%;
+  }
+  .main-page .main-info .main-branch {
+    right: 22%;
+    top: 32%;
+  }
+  p {
+    font-size: 20px;
+  }
+  .about-curses .small {
+    max-width: 200px;
+  }
+  .about-curses .small + p {
+    max-width: 310px;
+  }
+  .about-curses .sheet {
+    right: -6%;
+    top: 2%;
+  }
+  .about-curses .paper {
+    top: -20%;
+    right: -38%;
+  }
+  .about-curses .items .item {
+    width: 300px;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -17%;
+    top: 600%;
+  }
+  .reviews p {
+    text-align: left;
+  }
+  .reviews .items .text p {
+    font-size: 20px;
+  }
+  .reviews .items .item1 {
+    width: 590px;
+    padding-left: 50px;
+    height: auto;
+  }
+  .reviews .items .item1 .text p {
+    padding-right: 60px;
+    width: 310px;
+  }
+  .reviews .items .item2 {
+    width: 550px;
+  }
+  .reviews .items .item2 .text p {
+    padding: 0 10px 20px 30px;
+    width: 310px;
+  }
+  .reviews .items .image2 .branch-small {
+    width: 60px;
+    top: 4%;
+    right: 16%;
+  }
+  .reviews .items .image2 .flower {
+    width: 40px;
+    top: 7%;
+    right: 5%;
+  }
+  .reviews .items .item3 {
+    padding: 0;
+    width: 390px;
+    height: auto;
+  }
+  .reviews .items .item3 .text p {
+    padding: 0 0 120px 20px;
+    width: 270px;
+  }
+  .reviews .items .item3 .image3 .dandelion {
+    top: 44%;
+    left: -10%;
+  }
+  .reviews .items .item4 {
+    width: 520px;
+    padding: 20px 0 60px 20px;
+  }
+  .reviews .items .item4 .text {
+    width: 400px;
+  }
+  .reviews .items .image4 .flower {
+    width: 50px;
+    top: 22%;
+    right: 6%;
+  }
+  .reviews .items .image4 .sheet {
+    width: 80px;
+    top: 22%;
+    right: -5%;
+  }
+  .reviews .items .item5 {
+    width: 370px;
+    padding-top: 50px;
+  }
+  .reviews .items .item5 .text {
+    padding: 0 50px 10px 40px;
+    width: 390px;
+  }
+  .reviews .items .image5 .sheet-small {
+    left: 65%;
+    top: 97%;
+  }
+}
+@media (max-width: 429px) {
+  .main-page .main-info .main-branch {
+    right: 22%;
+    top: 28%;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -17%;
+    top: 700%;
+  }
+}
+@media (max-width: 387px) {
+  .main-page .main-info .main-branch {
+    right: 22%;
+    top: 27%;
+  }
+  .benefits-courses .dandelion {
+    position: absolute;
+    left: -17%;
+    top: 700%;
+  }
+}/*# sourceMappingURL=main.css.map */
